@@ -1,6 +1,6 @@
 (function() {
     "use strict";
-
+    //The code below does almost all the work of the extension
     function startDownload() {
         let csv = [];
         let studentList = document.getElementsByClassName('student-grid-row');
