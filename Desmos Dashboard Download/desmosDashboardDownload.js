@@ -57,7 +57,9 @@
             return "Complete";
         } else if (cell.getElementsByClassName('warning-decorator').length > 0) {
             var elem = cell.getElementsByClassName('warning-decorator')[0]
-            var toolt = elem.attributes.getNamedItem("tooltip").value;
+            var elem2 = elem.getElementsByClassName('pillow-icon-error')[0]
+            var toolt= elem2.attributes.getNamedItem("aria-label").value
+            //var toolt = elem.attributes.getNamedItem("tooltip").value;
             return "Warning: " + toolt
         } else {
             return "Incomplete";
