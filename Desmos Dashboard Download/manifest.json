@@ -1,13 +1,11 @@
 {
 	"name": "Desmos Dashboard Download",
 	"description": "Download a Desmos teacher dashboard. (unofficial)",
-	"version": "6",
-	"manifest_version": 2,
-	"permissions": ["contextMenus", "activeTab"],
-	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
-	},"browser_action": {
+	"version": "7.1",
+	"manifest_version": 3,
+	"permissions": ["scripting", "activeTab"],
+	"action": {
+   		"default_title": "Desmos Dashboard Download",  
 		"default_popup": "popup.html"
 	},
 	"icons": {

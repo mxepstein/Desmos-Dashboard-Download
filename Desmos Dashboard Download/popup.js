@@ -2,7 +2,11 @@
 	"use strict";
 	document.getElementById("desmosDashboardDownload").addEventListener("click", function(){
 		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-			chrome.tabs.executeScript(tabs[0].id, {file: "desmosDashboardDownload.js", allFrames:true});
+			chrome.scripting.executeScript({
+    			target: {tabId: tabs[0].id, allFrames: false},
+   			files: ['desmosDashboardDownload.js'],
+			});
+
 		});
 		window.close();
 	});
