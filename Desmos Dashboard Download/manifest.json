@@ -1,7 +1,7 @@
 {
 	"name": "Desmos Dashboard Download",
 	"description": "Download a Desmos teacher dashboard. (unofficial)",
-	"version": "7.1",
+	"version": "7.2",
 	"manifest_version": 3,
 	"permissions": ["scripting", "activeTab"],
 	"action": {
