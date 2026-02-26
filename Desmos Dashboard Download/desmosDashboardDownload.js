@@ -57,11 +57,8 @@
         } else if (cell.getElementsByClassName('work-submitted-decorator').length > 0) {
             return "Complete";
         } else if (cell.getElementsByClassName('warning-decorator').length > 0) {
-            var elem = cell.getElementsByClassName('warning-decorator')[0]
-            var elem2 = elem.getElementsByClassName('dcg-tooltip-hit-area-container')[0]//elem2 = elem.getElementsByClassName('pillow-icon-error')[0]
-            var elem3 = elem2.getElementsByClassName('icon-v2-messaging-warning scale-minus-1')[0]
-            var toolt= elem3.attributes.getNamedItem("aria-label").value
-            //var toolt = elem.attributes.getNamedItem("tooltip").value;
+            var tooltipSpan = cell.getElementsByClassName('aria-describedby-text')[0];
+            var toolt = tooltipSpan ? tooltipSpan.innerText.trim() : 'Unknown';
             return "Warning: " + toolt
         } else {
             return "Incomplete";
